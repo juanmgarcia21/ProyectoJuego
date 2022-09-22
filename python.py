@@ -13,10 +13,9 @@ def tirar_dado(numero):
 
 
 class Jugador:
-    def __init__(self, nombre, ataque, medicina):
+    def __init__(self, nombre, ataque):
         self.nombre = nombre
         self.ataque = ataque
-        self.medicina = medicina
         self.vida = 100
 
     def ganar(self):
@@ -56,13 +55,11 @@ while jugador1.vida > 0 and jugador2.vida > 0:
         print("\n----- Proxima partida -----")
         print(input("Tirar dado"))
 
+print("\n----- RESULTADOS -----")
+print("VIDA JUGADOR 1: " + str(jugador1.vida))
+print("VIDA JUGADOR 2: " + str(jugador2.vida))
 
 if jugador1.vida <= 0:
     jugador2.ganar()
 else:
     jugador1.ganar()
-
-
-print("\n----- RESULTADOS -----")
-print("VIDA JUGADOR 1: " + jugador1.vida)
-print("VIDA JUGADOR 1: " + jugador2.vida)
